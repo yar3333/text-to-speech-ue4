@@ -1,0 +1,22 @@
+{
+	"FileVersion" : 3,
+	
+	"FriendlyName" : "Test To Speech",
+	"Version" : 1,
+	"VersionName" : "1.0.0",
+	"CreatedBy" : "yar3333",
+	"CreatedByURL" : "",
+	"EngineVersion" : "4.21.0",
+	"Description" : "Generating Wave from text (SAPI).",
+	"Category" : "Audio",
+	"EnabledByDefault" : true,
+	
+	"Modules" :
+	[
+		{
+			"Name" : "TextToSpeechRuntime",
+			"Type" : "Runtime",
+			"LoadingPhase": "PreDefault"
+		}
+	]
+}
