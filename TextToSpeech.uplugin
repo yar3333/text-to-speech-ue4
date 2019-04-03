@@ -14,7 +14,7 @@
 	"Modules" :
 	[
 		{
-			"Name" : "TextToSpeechRuntime",
+			"Name" : "TextToSpeech",
 			"Type" : "Runtime",
 			"LoadingPhase": "PreDefault"
 		}

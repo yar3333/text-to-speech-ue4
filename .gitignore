@@ -1,3 +1,5 @@
-Binaries
-Intermediate
-ThirdParty/FMRTTSLib/src/intermediate
+Binaries/
+Intermediate/
+ThirdParty/FMRTTSLib/src/intermediate/
+ThirdParty/FMRTTSLib/src/.vs/
+*.pdb
