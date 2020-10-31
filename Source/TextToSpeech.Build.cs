@@ -52,7 +52,9 @@ namespace UnrealBuildTool.Rules
 
 			var FMRTTSLibFolder = Path.Combine(ModuleDirectory, @"..\ThirdParty", "FMRTTSLib");
 			var LibraryPath = Path.Combine(FMRTTSLibFolder, Target.Platform == UnrealTargetPlatform.Win64 ? "x64" : "x86");
-			PublicLibraryPaths.Add(LibraryPath);
+			
+			PublicSystemLibraryPaths.Add(LibraryPath);
+			
 			PublicAdditionalLibraries.Add(Path.Combine(LibraryPath, "FMRTTSLib.lib"));
 			PrivateIncludePaths.Add(Path.Combine(FMRTTSLibFolder, "include"));
 

@@ -1,5 +1,5 @@
-#include "TextToSpeechPCH.h"
 #include "TextToSpeechSoundWave.h"
+#include "TextToSpeechPCH.h"
 #include "FMRTTSLib.h"
 
 UTextToSpeechSoundWave::UTextToSpeechSoundWave(const FObjectInitializer &ObjectInitializer) : Super(ObjectInitializer)
@@ -9,9 +9,9 @@ UTextToSpeechSoundWave::UTextToSpeechSoundWave(const FObjectInitializer &ObjectI
 bool UTextToSpeechSoundWave::Initialize(const FString &VoiceRequiredAttributes, const FString &VoiceOptionalAttributes, int32 Rate, const FString &Text)
 {
 	unsigned long BytesRead;
-	uint8 *AudioBuffer = (uint8*)FMRTTSLib::FMRTTSLibMain::TextToWav(*VoiceRequiredAttributes, *VoiceOptionalAttributes, Rate, *Text, &BytesRead);
+	uint8 *TTSAudioBuffer = (uint8*)FMRTTSLib::FMRTTSLibMain::TextToWav(*VoiceRequiredAttributes, *VoiceOptionalAttributes, Rate, *Text, &BytesRead);
 	
-	if (AudioBuffer)
+	if (TTSAudioBuffer)
 	{
 		NumChannels = 1;
 		SampleRate = 44100;
@@ -22,9 +22,9 @@ bool UTextToSpeechSoundWave::Initialize(const FString &VoiceRequiredAttributes, 
 		//TotalSamples = SamplesRead / 1000.0;
 		//ChannelSizes.Add(BytesRead);
 
-		QueueAudio((uint8*)AudioBuffer, BytesRead);
+		QueueAudio((uint8*)TTSAudioBuffer, BytesRead);
 		
-		delete AudioBuffer;
+		delete TTSAudioBuffer;
 	}
 	else
 	{

@@ -1,21 +1,25 @@
 {
-	"FileVersion" : 3,
-	
-	"FriendlyName" : "Test To Speech",
-	"Version" : 1,
-	"VersionName" : "1.0.0",
-	"CreatedBy" : "yar3333",
-	"CreatedByURL" : "",
-	"EngineVersion" : "4.21.0",
-	"Description" : "Generating Wave from text (SAPI).",
-	"Category" : "Audio",
-	"EnabledByDefault" : true,
-	
-	"Modules" :
-	[
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0.1",
+	"FriendlyName": "Text To Speech",
+	"Description": "Generating Wave from text (SAPI).",
+	"Category": "Audio",
+	"CreatedBy": "yar3333 (fix by wSh)",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EngineVersion": "4.25.0",
+	"EnabledByDefault": true,
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
 		{
-			"Name" : "TextToSpeech",
-			"Type" : "Runtime",
+			"Name": "TextToSpeech",
+			"Type": "Runtime",
 			"LoadingPhase": "PreDefault"
 		}
 	]
