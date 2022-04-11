@@ -56,6 +56,8 @@ namespace UnrealBuildTool.Rules
 			PublicSystemLibraryPaths.Add(LibraryPath);
 			
 			PublicAdditionalLibraries.Add(Path.Combine(LibraryPath, "FMRTTSLib.lib"));
+			PublicAdditionalLibraries.Add(Path.Combine(LibraryPath, "atls.lib"));
+
 			PrivateIncludePaths.Add(Path.Combine(FMRTTSLibFolder, "include"));
 
 			PublicDefinitions.Add("WITH_FMRTTSLIB=1");
